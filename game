@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shisha Stacker - Esoteric Master Edition</title>
+    
+    <!-- OGP / SNS Sharing Tags -->
+    <meta property="app-name" content="Shisha Stacker">
+    <meta property="og:title" content="Shisha Stacker - 奇妙で美しいシーシャ積み上げゲーム">
+    <meta property="og:description" content="美しく奇妙なステムを積み上げろ！あなただけの究極のシーシャタワーを築き上げ、記念カードをシェアしよう。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shisha-stacker.netlify.app/">
+    <meta property="og:image" content="https://shisha-stacker.netlify.app/ogp.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shisha Stacker - 奇妙で美しいシーシャ積み上げゲーム">
+    <meta name="twitter:description" content="美しく奇妙なステムを積み上げろ！あなただけの究極のシーシャタワーを築き上げ、記念カードをシェアしよう。">
+    <meta name="twitter:image" content="https://shisha-stacker.netlify.app/ogp.png">
+
+    <!-- Web App & Favicon -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+
+    <style>
+        * { box-sizing: border-box; user-select: none; -webkit-user-select: none; }
+        body {
+            margin: 0; padding: 0;
+            background: #080910;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow: hidden;
+            display: flex; justify-content: center; align-items: center;
+            height: 100vh; color: #fff;
+        }
+        #game-container {
+            position: relative;
+            width: 100%; max-width: 450px; height: 100vh;
+            background: #111;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+        }
+        canvas { display: block; width: 100%; height: 100%; }
+        
+        /* UI Overlay */
+        .ui-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            display: flex; flex-direction: column; justify-content: space-between;
+            padding: 20px;
+        }
+        .header {
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(10, 12, 24, 0.75);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 12px 18px; border-radius: 14px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        .score-box h2 { margin: 0; font-size: 14px; color: #d4af37; letter-spacing: 1px; text-transform: uppercase; }
+        .score-box p { margin: 4px 0 0
